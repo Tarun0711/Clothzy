@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Denim Jeans - Chlothzy | Premium Fashion</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Brand -->
+            <a href="#" class="navbar-brand">
+                <span class="navbar-brand-icon"><i class="fas fa-tshirt"></i></span>
+                Chlothzy
+            </a>
+            
+            <!-- Navbar Actions -->
+            <div class="navbar-actions">
+                <button class="navbar-btn" onclick="showWishlist()"><i class="fas fa-heart"></i></button>
+                <button class="navbar-btn" onclick="showCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-counter" id="cartCounter">0</span>
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Product Card -->
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+            <!-- Discount Badge -->
+            <div class="discount-badge" aria-label="20% discount">
+                20% OFF
+            </div>
+            
+            <!-- Wishlist Button -->
+            <button class="wishlist-btn" aria-label="Add to wishlist">
+                <i class="far fa-heart"></i>
+            </button>
+            
+            <!-- Product Image -->
+            <div class="image-container">
+                <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/jean/2/b/p/-original-imahd83srncvgqkh.jpeg?q=70&crop=false" 
+                     alt="Blue Denim Jeans - Premium quality denim jeans with classic design" 
+                     class="product-image"
+                     itemprop="image"
+                     loading="lazy">
+            </div>
+            
+            <!-- Product Information -->
+            <div class="product-info">
+                <!-- Product Category -->
+                <div class="product-category">Premium Fashion</div>
+                
+                <!-- Product Name -->
+                <h1 class="product-name" itemprop="name">Blue Denim Jeans</h1>
+                
+                <!-- Product Rating -->
+                <div class="product-rating">
+                    <div class="stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">(156 reviews)</span>
+                </div>
+                
+                <!-- Product Price -->
+                <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <span class="current-price" itemprop="price" content="1499">₹1,499</span>
+                    <span class="original-price">₹1,874</span>
+                    <span class="discount-percent">20% OFF</span>
+                    <meta itemprop="priceCurrency" content="INR">
+                    <meta itemprop="availability" content="https://schema.org/InStock">
+                </div>
+                
+                <!-- Size Selector (hidden by default, shown on hover) -->
+                <div class="size-selector">
+                    <div class="size-label">Select Size</div>
+                    <div class="size-options">
+                        <button class="size-option" data-size="XS">XS</button>
+                        <button class="size-option" data-size="S">S</button>
+                        <button class="size-option selected" data-size="M">M</button>
+                        <button class="size-option" data-size="L">L</button>
+                        <button class="size-option" data-size="XL">XL</button>
+                        <button class="size-option" data-size="XXL">XXL</button>
+                    </div>
+                </div>
+                
+                <!-- Add to Cart Button -->
+                <button class="add-to-cart-btn" onclick="addToCart(this)" aria-label="Add Blue Denim Jeans to cart">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                
+                <!-- Buy Now Button -->
+                <button class="buy-now-btn" onclick="buyNow(this)" aria-label="Buy Blue Denim Jeans now">
+                    <i class="fas fa-bolt"></i> Buy Now
+                </button>
+            </div>
+        </article>
+    </div>
+    
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
